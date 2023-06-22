@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 200px;
 }
 
 .App-logo {
@@ -9,7 +10,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: rotatingAndScaling 1s infinite linear;
   }
 }
 
@@ -28,11 +29,26 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes flashingBackground {
+  0% {background-color: #ff0055;}
+  25% {background-color: #ff7700;}
+  50% {background-color: #ffaa00;}
+  75% {background-color: #00ccff;}
+  100% {background-color: #ff0055;}
+}
+
+body {
+  animation: flashingBackground 2s infinite;
+}
+
+@keyframes rotatingAndScaling {
+  0% {
+    transform: rotate(0deg) scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(720deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(1440deg) scale(1);
   }
 }
