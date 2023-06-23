@@ -17,6 +17,7 @@ ul.menu li {
   font-size: 16px;
   margin-right: 10px;
   border-radius: 10px;
+  transition: 0.2s linear;
 }
 
 ul.menu li a {
@@ -26,6 +27,7 @@ ul.menu li a {
 }
 
 ul.menu li:hover {
+  translate: -2px -2px;
   background-color: darkcyan;
   box-shadow: 5px 5px 5px gray;
 
