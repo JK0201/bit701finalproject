@@ -1,2 +1,27 @@
+#port
 server:
   port: 9002
+
+#jsp forward setting
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+
+#mysql setting
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db-g66ln-kr.vpc-pub-cdb.ntruss.com/bit701?serverTimezone=Asia/Seoul
+    username: study
+    password: bit123!@#
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+#mybatis
+mybatis:
+  type-aliases-package: data.dto
+  mapper-locations:
+    - /mapper/**/*.xml
